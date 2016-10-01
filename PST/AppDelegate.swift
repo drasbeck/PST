@@ -46,7 +46,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     
     // left click invokes ping graphics
     func leftClickAction(leftClick: NSGestureRecognizer) {
-        if let button = leftClick.view as? NSButton {
+        if (leftClick.view as? NSButton) != nil {
             togglePopover(sender: self)
         }
     }
@@ -56,7 +56,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         popover.contentViewController = PSTViewController(nibName: "PSTViewController", bundle: nil)        
         
         if let button = statusItem.button {
-            button.image = NSImage(named: "StatusBarButtonImage")
+            button.image = NSImage(named: "iconEmpty")
             
             // left click functionality
             let leftClick = NSClickGestureRecognizer()
