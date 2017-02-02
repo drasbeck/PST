@@ -1,5 +1,5 @@
 //
-//  PSTViewController.swift
+//  PSTpopover.swift
 //  PST
 //
 //  Created by Max Drasbeck on 23/09/2016.
@@ -8,7 +8,7 @@
 
 import Cocoa
 
-class PSTViewController: NSViewController {
+class PSTpopover: NSViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()

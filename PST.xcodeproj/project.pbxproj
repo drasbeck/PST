@@ -10,8 +10,8 @@
 		50F7DF831D95AF8300E00257 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50F7DF821D95AF8300E00257 /* AppDelegate.swift */; };
 		50F7DF851D95AF8300E00257 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 50F7DF841D95AF8300E00257 /* Assets.xcassets */; };
 		50F7DF881D95AF8300E00257 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 50F7DF861D95AF8300E00257 /* MainMenu.xib */; };
-		50F7DF911D95BD0800E00257 /* PSTViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50F7DF8F1D95BD0800E00257 /* PSTViewController.swift */; };
-		50F7DF921D95BD0800E00257 /* PSTViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 50F7DF901D95BD0800E00257 /* PSTViewController.xib */; };
+		50F7DF911D95BD0800E00257 /* PSTpopover.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50F7DF8F1D95BD0800E00257 /* PSTpopover.swift */; };
+		50F7DF921D95BD0800E00257 /* PSTpopover.xib in Resources */ = {isa = PBXBuildFile; fileRef = 50F7DF901D95BD0800E00257 /* PSTpopover.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,8 +20,8 @@
 		50F7DF841D95AF8300E00257 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		50F7DF871D95AF8300E00257 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
 		50F7DF891D95AF8300E00257 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		50F7DF8F1D95BD0800E00257 /* PSTViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PSTViewController.swift; path = PST/PSTViewController.swift; sourceTree = "<group>"; };
-		50F7DF901D95BD0800E00257 /* PSTViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = PSTViewController.xib; path = PST/PSTViewController.xib; sourceTree = "<group>"; };
+		50F7DF8F1D95BD0800E00257 /* PSTpopover.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PSTpopover.swift; path = PST/PSTpopover.swift; sourceTree = "<group>"; };
+		50F7DF901D95BD0800E00257 /* PSTpopover.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = PSTpopover.xib; path = PST/PSTpopover.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -38,8 +38,8 @@
 		50F7DF761D95AF8300E00257 = {
 			isa = PBXGroup;
 			children = (
-				50F7DF8F1D95BD0800E00257 /* PSTViewController.swift */,
-				50F7DF901D95BD0800E00257 /* PSTViewController.xib */,
+				50F7DF8F1D95BD0800E00257 /* PSTpopover.swift */,
+				50F7DF901D95BD0800E00257 /* PSTpopover.xib */,
 				50F7DF811D95AF8300E00257 /* PST */,
 				50F7DF801D95AF8300E00257 /* Products */,
 			);
@@ -91,7 +91,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0800;
-				LastUpgradeCheck = 0800;
+				LastUpgradeCheck = 0820;
 				ORGANIZATIONNAME = "Max Drasbeck";
 				TargetAttributes = {
 					50F7DF7E1D95AF8300E00257 = {
@@ -125,7 +125,7 @@
 			files = (
 				50F7DF851D95AF8300E00257 /* Assets.xcassets in Resources */,
 				50F7DF881D95AF8300E00257 /* MainMenu.xib in Resources */,
-				50F7DF921D95BD0800E00257 /* PSTViewController.xib in Resources */,
+				50F7DF921D95BD0800E00257 /* PSTpopover.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -136,7 +136,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				50F7DF911D95BD0800E00257 /* PSTViewController.swift in Sources */,
+				50F7DF911D95BD0800E00257 /* PSTpopover.swift in Sources */,
 				50F7DF831D95AF8300E00257 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -173,6 +173,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_SUSPICIOUS_MOVES = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -222,6 +223,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_SUSPICIOUS_MOVES = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -290,6 +292,7 @@
 				50F7DF8E1D95AF8300E00257 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

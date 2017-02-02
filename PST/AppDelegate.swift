@@ -17,7 +17,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     let popover = NSPopover()
     
     func showPreferences(sender: AnyObject) {
-        // placeholder for an actual preferences screen
+        // placeholder quote for an actual preferences screen
         let quoteText = "Success is not final, failure is not fatal: it is the courage to continue that counts."
         let quoteAuthor = "Winston Churchill"
         
@@ -25,9 +25,11 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     }
     
     
-    // ping graphics
+    // popover ping graphics
     func showPopover(sender: AnyObject?) {
         if let button = statusItem.button {
+            NSApplication.shared().activate(ignoringOtherApps: true) // activates popover ready for key
+            popover.behavior = .transient // enables closing popover when clicking outside this
             popover.show(relativeTo: button.bounds, of: button, preferredEdge: NSRectEdge.minY)
         }
     }
@@ -53,14 +55,14 @@ class AppDelegate: NSObject, NSApplicationDelegate {
 
     
     func applicationDidFinishLaunching(_ aNotification: Notification) {
-        popover.contentViewController = PSTViewController(nibName: "PSTViewController", bundle: nil)        
+        popover.contentViewController = PSTpopover(nibName: "PSTpopover", bundle: nil)
         
         if let button = statusItem.button {
             button.image = NSImage(named: "iconEmpty")
             
             // left click functionality
             let leftClick = NSClickGestureRecognizer()
-            leftClick.buttonMask = 0x1 // right mouse
+            leftClick.buttonMask = 0x1 // right mouse click
             leftClick.numberOfClicksRequired = 1
             leftClick.target = self
             leftClick.action = #selector(leftClickAction)
@@ -68,7 +70,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         }
         
         
-        // Menu interface
+        // Menu interface (right click)
         let menu = NSMenu()
         
         menu.addItem(NSMenuItem(title: "Preferences", action: #selector(showPreferences), keyEquivalent: ","))
